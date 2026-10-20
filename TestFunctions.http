@@ -5,7 +5,7 @@ Accept: application/json
 
 ###
 
-GET {{HostAddress}}/api/students/113
+GET {{HostAddress}}/api/students/101
 Accept: application/json
 
 ###
@@ -24,7 +24,7 @@ Accept: application/json
 
 ###
 
-PUT {{HostAddress}}/api/students/113
+PUT {{HostAddress}}/api/students/101
 Content-Type: application/json
 
 {
@@ -37,4 +37,4 @@ Content-Type: application/json
 
 ###
 
-DELETE {{HostAddress}}/api/students/113
+DELETE {{HostAddress}}/api/students/101

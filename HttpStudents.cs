@@ -135,5 +135,16 @@ public class HttpStudents
         return response2;
     }
 
-
+    [Function("WhoAmI")]
+    public async Task<HttpResponseData> WhoAmI
+    (
+      [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "whoami")] HttpRequestData req
+    )
+    {
+        _logger.LogInformation("C# HTTP GET/posts trigger function processed a request.");
+        var response = req.CreateResponse(HttpStatusCode.OK);
+        response.Headers.Add("Content-Type", "text/plain; charset=utf-8");
+        await response.WriteStringAsync("Angus Grewal");
+        return response;
+    }
 }
